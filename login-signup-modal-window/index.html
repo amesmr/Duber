@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Gem style -->
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+    <title>Log In &amp; Sign Up Form</title>
+    
+    <!-- Latest compiled and minified CSS & JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" media="screen">
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+    <style>
+    body {
+        background: #1E90ff;
+        background-image: url("https://68.media.tumblr.com/c2284837bc48e73eb517591b9c544dc0/tumblr_oik8ifRJ591s8mouyo1_500.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #alert {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        background-color: transparent;
+        /*color: #20b2aa;*/
+        padding: 5px;
+        font-weight: bold;
+    }
+    
+    .well1 {
+        background-color: transparent;
+        padding-left: 50%;
+    }
+    
+    .maptitle {
+        color: #20b2aa;
+        text-align: center;
+        font-size: 28px;
+    }
+    
+    h1 {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    style {
+        background-color: rgb(032, 178, 170);
+    }
+    
+    .well1 {
+        text-align: center;
+        box-shadow: none !important;
+    }
+    
+    .button {
+        position: absolute;
+        top: 50%;
+        background-color: #ffffff !important;
+        z-index: 9999;
+    }
+    
+    .navbar-brand {
+        color: blue;
+        font-size: 25px;
+    }
+    
+    .navbar-nav {
+        position: relative;
+        float: right;
+    }
+    </style>
+</head>
+
+<body>
+    <header role="banner">
+        <div id="cd-logo">
+            <a href="#0" alt="Logo">Can-I-Kayak?</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <!-- insert more links here -->
+                <li>
+                    <a href="https://www.github.com"><img src="assets/images/github.jpeg" class="class" width="50px" height="50px" alt="Go to Github.com!"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com"><img src="assets/images/fb.jpeg" class="social" width="50px" height="50px" alt="Go to facebook.com!"></a>
+                </li>
+                <li>
+                    <a href=href="https://www.googleplus.com"><img src="assets/images/google+.jpeg" class="social" width="50px" height="50px" alt="Go to googleplus.com!"></a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com"><img src="assets/images/twitter.jpeg" class="social" width="50px" height="50px" alt="Go to twitter.com!"></a>
+                </li>
+                <li><a class="cd-signin" href="#0">Sign in</a></li>
+                <li><a class="cd-signup" href="#0">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+     <div class="wrapper">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-9">
+            <div class="well1">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>Looking for your next Kayak Adventure?</h1>
+                <a type="submit" href="/map" class="btn btn-primary btn-lg">Find it! </a>
+            </div>
+        </div>
+    </div>
+    <div class="cd-user-modal">
+        <!-- this is the entire modal form, including the background -->
+        <div class="cd-user-modal-container">
+            <!-- this is the container wrapper -->
+            <ul class="cd-switcher">
+                <li><a href="#0">Sign in</a></li>
+                <li><a href="#0">New account</a></li>
+            </ul>
+            <div id="cd-login">
+                <!-- log in form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Remember me</label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Login">
+                    </p>
+                </form>
+                <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div>
+            <!-- cd-login -->
+            <div id="cd-signup">
+                <!-- sign up form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Username</label>
+                        <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account">
+                    </p>
+                </form>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div>
+            <!-- cd-signup -->
+            <div id="cd-reset-password">
+                <!-- reset password form -->
+                <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password">
+                    </p>
+                </form>
+                <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+            </div>
+            <!-- cd-reset-password -->
+            <a href="#0" class="cd-close-form">Close</a>
+        </div>
+        <!-- cd-user-modal-container -->
+    </div>
+    <!-- cd-user-modal -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Gem jQuery -->
+</body>
+
+</html>
