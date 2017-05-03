@@ -1,0 +1,31 @@
+{
+  "name": "duber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "crypto": "0.0.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "fs": "0.0.1-security",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0",
+    "path": "^0.12.7",
+    "react": "^15.5.4",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amesmr/Duber.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amesmr/Duber/issues"
+  },
+  "homepage": "https://github.com/amesmr/Duber#readme"
+}
