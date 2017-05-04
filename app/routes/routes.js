@@ -20,8 +20,9 @@ var IndexRoute = router.IndexRoute;
 
 // Reference the high-level components
 var Main = require("../components/Main");
-var Info = require("../components/Info");
-var Chat = require("../components/Chat");
+var AdminLogin = require("../components/children/AdminLogin");
+var AdminSignup = require("../components/children/AdminSignup");
+var AdminMap = require("../components/children/AdminMap");
 
 
 // Export the Routes
@@ -32,11 +33,12 @@ module.exports = (
     <Route path="/" component={Main}>
 
       {/* If user selects Info or Chat show the appropriate component */}
-      <Route path="info" component={Info} />
-      <Route path="chat" component={Chat} />
+      <Route path="adminLogin" component={AdminLogin} />
+      <Route path="adminSignup" component={AdminSignup} />
+      <Route path="adminMaps" component={AdminMap} />
 
       {/* use Info Route as default*/}
-      <IndexRoute component={Info} />
+      <IndexRoute component={Main} />
 
     </Route>
   </Router>
