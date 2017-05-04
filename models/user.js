@@ -1,11 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
-            id: {
-                type: DataTypes.INTEGER,
-                primaryKey: true,
-                autoIncrement: true,
-                allowNull: false
-            },
+            // sequelize does this by default
+            // id: {
+            //     type: DataTypes.INTEGER,
+            //     primaryKey: true,
+            //     autoIncrement: true,
+            //     allowNull: false
+            // },
             email: {
                 type: DataTypes.STRING,
                 validate: {
@@ -31,13 +32,15 @@ module.exports = function(sequelize, DataTypes) {
                 ]
             }
     }
+        // // TODO
+        // // do we need to associate users and admins here?
         // ,
-        // // To create an association between Users and Players
+        // // To create an association between Users and Admins
         // {
         //     classMethods: {
         //         associate: function(models) {
         //             //
-        //             User.hasMany(models.Player);
+        //             User.hasMany(models.Admins);
         //         }
         //     }
         // }
