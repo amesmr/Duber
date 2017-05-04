@@ -1,31 +1,33 @@
 {
-  "name": "duber",
+  "name": "react-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack & node server",
+    "start": "node server",
+    "build": "webpack"
+  },
+  "author": "Alex Murray, Melinda Owen, Barbara Mitchell and Matt Ames",
+  "license": "ISC",
   "dependencies": {
-    "crypto": "0.0.3",
-    "express": "^4.15.2",
-    "express-session": "^1.15.2",
-    "fs": "0.0.1-security",
-    "moment": "^2.18.1",
+    "@google/maps": "^0.3.1",
+    "axios": "^0.12.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
     "mysql": "^2.13.0",
-    "path": "^0.12.7",
-    "react": "^15.5.4",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^4.1.1",
     "sequelize": "^3.30.4"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amesmr/Duber.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/amesmr/Duber/issues"
-  },
-  "homepage": "https://github.com/amesmr/Duber#readme"
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "webpack": "^1.13.1"
+  }
 }

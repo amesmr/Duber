@@ -1,33 +1,24 @@
-// *****************************************************************************
-// Server.js - Initial starting point for the Node/Express server.
-//
-// ******************************************************************************
-// *** Dependencies
-// =============================================================
+// Include Server Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
-var expressValidator = require('express-validator');
+var logger = require("morgan");
 var expressSession = require('express-session');
 
-
-// Set up the Express App
-// =============================================================
+// Require History Schema Create Instance of Express
 var app = express();
-var PORT = process.env.PORT || 8080;
+// Sets an initial port. We'll use this later in our listener
+var PORT = process.env.PORT || 3000;
 
-// Requiring models for syncing
+// Requiring our models for syncing
 var db = require("./models");
 
-// Set up Express app to handle data parsing
+// Run Morgan for Logging
+app.use(logger("dev"));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-//After the body is parsed, it's time for validation
-//this starts the express validator
-app.use(expressValidator());
+app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
-// Static directory
 app.use(express.static("./public"));
 
 //At the end here we add express session
@@ -41,18 +32,19 @@ app.use(expressSession({
 	resave: false
 }));
 
-// Routes =============================================================
-
-// Requiring html-routes.js to route html files
-require("./controllers/html-routes.js")(app);
-require("./controllers/api-routes.js")(app);
-
-// Syncing sequelize models, then starting express app
-db.sequelize.sync({force: false}).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+// Main "/" Route. This will redirect the user to our rendered React application
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + "/public/index.html");
 });
 
-
+// Syncing our sequelize models and then starting our express app
+db
+    .sequelize
+    .sync({force: false})
+    .then(function () {
+        app
+            .listen(PORT, function () {
+                console.log("App listening on PORT " + PORT);
+            });
+    });
 
