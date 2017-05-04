@@ -21,8 +21,8 @@ $(document).ready(function() {
         $(this).parent().find(".editBoxes").attr('disabled', false).removeClass("non-editable");
         console.log("Edit enabled");
         // Get values from fields
-        var date = $(this).parent().find(".tournamentDate").val();
-        var time = $(this).parent().find(".tournamentTime").val();
+        // var date = $(this).parent().find(".tournamentDate").val();
+        // var time = $(this).parent().find(".tournamentTime").val();
         // console.log(moment(date, "ll").format("YYYY MM DD"));
         // Hide the edit button
         $(this).hide();
@@ -42,7 +42,7 @@ $(document).ready(function() {
     });
 
 
-    // UPDATE BUTTON TO MODIFY TOURNAMENT DB DATA
+    // UPDATE BUTTON TO MODIFY Animal DB DATA
     // On click of Update button,
     $("#animalsList").on("click", ".animalData>.update", function(event) {
         event.preventDefault();
@@ -52,7 +52,7 @@ $(document).ready(function() {
         var animal_date = $(this).parent().find(".animalDate").val();
         var animal_time = $(this).parent().find(".animalTime").val();
         console.log(animal_name);
-        // Get tournamentId from the parent div of the button clicked
+        // Get animalId from the parent div of the button clicked
         var animal_id = $(this).parent().attr("id");
 
         var animalObject = {
@@ -90,7 +90,7 @@ $(document).ready(function() {
         var animal_name = $(this).parent().find(".animalName").val();
         var animal_date = $(this).parent().find(".animalDate").val();
         console.log(animal_name);
-        // Get tournamentId from the parent div of the button clicked
+        // Get animalId from the parent div of the button clicked
         var animal_id = $(this).parent().attr("id");
         console.log(animal_id);
 
