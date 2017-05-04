@@ -12,12 +12,13 @@ var AdminSignup = require("./children/AdminSignup");
 var helpers = require("./utils/helpers");
 
 // Creating the Main component
-var Main = React.createClass({
 
   // TODO
   // figure out what needs to be set in this initial state
-  getInitialState: function() {
-    return { searchTerm: "", results: "", history: [] };
+var Main = React.createClass({
+    getInitialState: function () {
+    // This ain't it
+    // return { searchTerm: "", results: "", history: [] };
   },
 
   // The moment the page renders get the History
