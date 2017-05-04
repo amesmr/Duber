@@ -34,30 +34,118 @@ var AdminSignup = React.createClass({
                     <h3 className="panel-title text-center">Signup Your Organization</h3>
                 </div>
                 <div className="panel-body text-center">
-                    <form onSubmit={this.handleSubmit}>
-                        <div className="form-group">
-                            <h4 className="">
-                                <strong>address</strong>
-                            </h4>
-
-                            {/*
-                            Note how each of the form elements has an id that matches the state.
-                            This is not necessary but it is convenient.
-                            Also note how each has an onChange event associated with our handleChange event.
-                            */}
-                            <input
-                                value={this.state.term}
-                                type="text"
-                                className="form-control text-center"
-                                id="address"
-                                onChange={this.handleChange}
-                                required/>
-                            <br/>
-                            <button className="btn btn-primary" type="submit">
-                                Submit
-                            </button>
+                    <div class="bootstrap-iso">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <form method="post">
+                                        <div class="form-group ">
+                                            <label class="control-label requiredField" for="name">
+                                                User Name
+                                                <span class="asteriskField">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <input
+                                                class="form-control"
+                                                id="name"
+                                                name="name"
+                                                placeholder="UserName"
+                                                type="text"/>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label requiredField" for="pswd">
+                                                Password
+                                                <span class="asteriskField">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <input
+                                                class="form-control"
+                                                id="pswd"
+                                                name="pswd"
+                                                placeholder="6 character minimum"
+                                                type="text"/>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label requiredField" for="email">
+                                                Email
+                                                <span class="asteriskField">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <input
+                                                class="form-control"
+                                                id="email"
+                                                name="email"
+                                                placeholder="user@email.com"
+                                                type="text"/>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label requiredField" for="streetAddr">
+                                                Street Address
+                                                <span class="asteriskField">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <input
+                                                class="form-control"
+                                                id="streetAddr"
+                                                name="streetAddr"
+                                                placeholder="111 Main St, SS, 12345"
+                                                type="text"/>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label " for="mailAddr">
+                                                Mailing Address (If different than Street Address)
+                                            </label>
+                                            <input
+                                                class="form-control"
+                                                id="mailAddr"
+                                                name="mailAddr"
+                                                placeholder="111 Main St."
+                                                type="text"/>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label requiredField" for="npID">
+                                                Non Profit ID (501c3)
+                                                <span class="asteriskField">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <input
+                                                class="form-control"
+                                                id="npID"
+                                                name="npID"
+                                                placeholder="341142324"
+                                                type="text"/>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label requiredField" for="tel">
+                                                Telephone #
+                                                <span class="asteriskField">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <input
+                                                class="form-control"
+                                                id="tel"
+                                                name="tel"
+                                                placeholder="5551234567"
+                                                type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <div>
+                                                <button class="btn btn-primary " name="submit" type="submit">
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         );

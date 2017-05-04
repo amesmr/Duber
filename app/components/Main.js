@@ -3,10 +3,10 @@ var React = require("react");
 
 // Here we include all of the sub-components
 var AdminLogin = require("./children/AdminLogin");
-var UserLogin = require("./children/UserLogin");
+// var UserLogin = require("./children/UserLogin");
 var AdminSignup = require("./children/AdminSignup");
-var UserSignup = require("./children/UserSignup");
-var UserView = require("./children/UserView");
+// var UserSignup = require("./children/UserSignup");
+// var UserView = require("./children/UserView");
 
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
