@@ -4,8 +4,7 @@
         "password": "root",
         "database": "tran_db",
         "port": "3306",
-        "dialect": "mysql",
-        // "host": "us-cdbr-iron-east-03.cleardb.net"
+        "dialect": "mysql"
     },
     "test": {
         "username": "root",
@@ -19,7 +18,6 @@
         "password": "root",
         "database": "tran_db",
         "port": "3306",
-        "dialect": "mysql",
-        // "host": "us-cdbr-iron-east-03.cleardb.net"
+        "dialect": "mysql"
     }
 }

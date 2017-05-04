@@ -14,8 +14,8 @@ var helpers = require("./utils/helpers");
 // Creating the Main component
 var Main = React.createClass({
 
-  // Here we set a generic state associated with the number of clicks
-  // Note how we added in this history state variable
+  // TODO
+  // figure out what needs to be set in this initial state
   getInitialState: function() {
     return { searchTerm: "", results: "", history: [] };
   },

@@ -30,16 +30,17 @@ module.exports = function(sequelize, DataTypes) {
                     ['admin', 'user']
                 ]
             }
-        },
-        // To create an association between Users and Players
-        {
-            classMethods: {
-                associate: function(models) {
-                    // 
-                    User.hasMany(models.Player);
-                }
-            }
-        }
+    }
+        // ,
+        // // To create an association between Users and Players
+        // {
+        //     classMethods: {
+        //         associate: function(models) {
+        //             //
+        //             User.hasMany(models.Player);
+        //         }
+        //     }
+        // }
     );
     return User;
 };
