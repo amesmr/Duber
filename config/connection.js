@@ -10,7 +10,7 @@ else{
         host:   'localhost',
         user:   'root',
         password: 'root',
-        database: 'duber'
+        database: 'tran_db'
     });
 }
 
