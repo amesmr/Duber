@@ -1,3 +1,4 @@
+"use strict";
 // Include React
 var React = require("react");
 
@@ -19,8 +20,9 @@ var AdminMap = React.createClass({
     // Here we describe this component's render method
     render: function () {
 
-        <div class="row">
+        <div className="row">
             <div id="map-view">
+            put map here
             </div>
         </div>
 

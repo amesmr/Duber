@@ -21,21 +21,20 @@ app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 app.use(express.static("./public"));
 
-//At the end here we add express session
-//Express Session
-app.use(expressSession({
-	secret: 'secret code',
-	//If saveUnitialized is set to true it will save a session to our session storage even if it is not initialized 
-	saveUninitialized: false,
-	//If resave is set to true it will save our session after each request
-	//false will only save if we change something
-	resave: false
-}));
+// //At the end here we add express session
+// //Express Session
+// app.use(expressSession({
+// 	secret: 'secret code',
+// 	//If saveUnitialized is set to true it will save a session to our session storage even if it is not initialized
+// 	saveUninitialized: false,
+// 	//If resave is set to true it will save our session after each request
+// 	//false will only save if we change something
+// 	resave: false
+// }));
 
-// Main "/" Route. This will redirect the user to our rendered React application
-app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/public/index.html");
-});
+require("./controllers/html-routes.js")(app);
+require("./controllers/api-routes.js")(app);
+
 
 // Syncing our sequelize models and then starting our express app
 db
