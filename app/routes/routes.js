@@ -33,12 +33,12 @@ module.exports = (
     <Router history={hashHistory}>
             <Route path="/" component={Main}>
 
-            {/* If user selects Info or Chat show the appropriate component */}
+            {/* show the appropriate component */}
             <Route path="adminLogin" component={AdminLogin} />
             <Route path="adminSignup" component={AdminSignup} />
             <Route path="adminMaps" component={AdminMap} />
 
-            {/* use Info Route as default*/}
+            {/* set the default route here*/}
             <IndexRoute component={AdminMap} />
             </Route>
     </Router>
