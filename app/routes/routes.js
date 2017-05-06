@@ -30,7 +30,7 @@ var AdminMap = require("../components/AdminMap");
 module.exports = (
 
   // The high level component is the Router component
-    <Router hash={hashHistory}>
+    <Router history={hashHistory}>
             <Route path="/" component={Main}>
 
             {/* If user selects Info or Chat show the appropriate component */}
