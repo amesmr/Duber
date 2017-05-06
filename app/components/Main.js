@@ -7,7 +7,7 @@ var AdminLogin = require("./children/AdminLogin");
 var AdminSignup = require("./children/AdminSignup");
 // var UserSignup = require("./children/UserSignup");
 // var UserView = require("./children/UserView");
-
+var Carousel= require("./children/Carousel");
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
 
