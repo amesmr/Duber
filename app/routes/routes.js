@@ -11,6 +11,7 @@ var Route = router.Route;
 // Here where we can pass in some configuration as props
 var Router = router.Router;
 
+
 // Include the hashHistory prop to handle routing client side without a server
 // https://github.com/ReactTraining/react-router/blob/master/docs/guides/Histories.md#hashhistory
 var hashHistory = router.hashHistory;
@@ -20,27 +21,26 @@ var IndexRoute = router.IndexRoute;
 
 // Reference the high-level components
 var Main = require("../components/Main");
-var AdminLogin = require("../components/children/AdminLogin");
-var AdminSignup = require("../components/children/AdminSignup");
-var AdminMap = require("../components/children/AdminMap");
+var AdminLogin = require("../components/AdminLogin");
+var AdminSignup = require("../components/AdminSignup");
+var AdminMap = require("../components/AdminMap");
 
 
 // Export the Routes
 module.exports = (
 
   // The high level component is the Router component
-  <Router history={hashHistory}>
-    <Route path="/" component={Main}>
+    <Router hash={hashHistory}>
+            <Route path="/" component={Main}>
 
-      {/* If user selects Info or Chat show the appropriate component */}
-      <Route path="adminLogin" component={AdminLogin} />
-      <Route path="adminSignup" component={AdminSignup} />
-      <Route path="adminMaps" component={AdminMap} />
+            {/* If user selects Info or Chat show the appropriate component */}
+            <Route path="adminLogin" component={AdminLogin} />
+            <Route path="adminSignup" component={AdminSignup} />
+            <Route path="adminMaps" component={AdminMap} />
 
-      {/* use Info Route as default*/}
-      <IndexRoute component={Main} />
-
-    </Route>
-  </Router>
+            {/* use Info Route as default*/}
+            <IndexRoute component={AdminMap} />
+            </Route>
+    </Router>
 
 );

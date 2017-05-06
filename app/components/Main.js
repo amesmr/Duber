@@ -1,12 +1,13 @@
+"use strict";
 // Include React
 var React = require("react");
 
 // Here we include all of the sub-components
-var AdminLogin = require("./children/AdminLogin");
-// var UserLogin = require("./children/UserLogin");
-var AdminSignup = require("./children/AdminSignup");
-// var UserSignup = require("./children/UserSignup");
-// var UserView = require("./children/UserView");
+var AdminLogin = require("./AdminLogin");
+// var UserLogin = require("./UserLogin");
+var AdminSignup = require("./AdminSignup");
+// var UserSignup = require("./UserSignup");
+// var UserView = require("./UserView");
 
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
@@ -16,53 +17,53 @@ var helpers = require("./utils/helpers");
   // TODO
   // figure out what needs to be set in this initial state
 var Main = React.createClass({
-    getInitialState: function () {
-    // This ain't it
-    // return { searchTerm: "", results: "", history: [] };
-  },
+//     getInitialState: function () {
+//     // This ain't it
+//     // return { searchTerm: "", results: "", history: [] };
+//   },
 
-  // The moment the page renders get the History
-  componentDidMount: function() {
-    // Get the latest history.
-    helpers.getHistory().then(function(response) {
-      console.log(response);
-      if (response !== this.state.history) {
-        console.log("History", response.data);
-        this.setState({ history: response.data });
-      }
-    }.bind(this));
-  },
+//   // The moment the page renders get the History
+//   componentDidMount: function() {
+//     // // Get the latest history.
+//     // helpers.getHistory().then(function(response) {
+//     //   console.log(response);
+//     //   if (response !== this.state.history) {
+//     //     console.log("History", response.data);
+//     //     this.setState({ history: response.data });
+//     //   }
+//     // }.bind(this));
+//   },
 
-  // If the component changes (i.e. if a search is entered)...
-  componentDidUpdate: function() {
+//   // If the component changes (i.e. if a search is entered)...
+//   componentDidUpdate: function() {
 
-    // Run the query for the address
-    helpers.runQuery(this.state.searchTerm).then(function(data) {
-      if (data !== this.state.results) {
-        console.log("Address", data);
-        this.setState({ results: data });
+//     // Run the query for the address
+//     helpers.runQuery(this.state.searchTerm).then(function(data) {
+//       if (data !== this.state.results) {
+//         console.log("Address", data);
+//         this.setState({ results: data });
 
-        // After we've received the result... then post the search term to our history.
-        helpers.postHistory(this.state.searchTerm).then(function() {
-          console.log("Updated!");
+//         // After we've received the result... then post the search term to our history.
+//         helpers.postHistory(this.state.searchTerm).then(function() {
+//           console.log("Updated!");
 
-          // After we've done the post... then get the updated history
-          helpers.getHistory().then(function(response) {
-            console.log("Current History", response.data);
+//           // After we've done the post... then get the updated history
+//           helpers.getHistory().then(function(response) {
+//             console.log("Current History", response.data);
 
-            console.log("History", response.data);
+//             console.log("History", response.data);
 
-            this.setState({ history: response.data });
+//             this.setState({ history: response.data });
 
-          }.bind(this));
-        }.bind(this));
-      }
-    }.bind(this));
-  },
-  // This function allows childrens to update the parent.
-  setTerm: function(term) {
-    this.setState({ searchTerm: term });
-  },
+//           }.bind(this));
+//         }.bind(this));
+//       }
+//     }.bind(this));
+//   },
+//   // This function allows childrens to update the parent.
+//   setTerm: function(term) {
+//     this.setState({ searchTerm: term });
+//   },
   // Here we render the function
   render: function() {
     return (
@@ -77,13 +78,13 @@ var Main = React.createClass({
 
           <div className="col-md-6">
 
-            <Form setTerm={this.setTerm} />
+            <AdminLogin />
 
           </div>
 
           <div className="col-md-6">
 
-            <Results address={this.state.results} />
+            <AdminSignup />
 
           </div>
 
@@ -91,7 +92,7 @@ var Main = React.createClass({
 
         <div className="row">
 
-          <History history={this.state.history} />
+          <About />
 
         </div>
 
