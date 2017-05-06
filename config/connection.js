@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+/*var mysql = require('mysql');
 var connection;
 
 if(process.env.JAWSDB_URL) {
@@ -14,4 +14,4 @@ else{
     });
 }
 
-module.exports = connection;
+module.exports = connection;*/

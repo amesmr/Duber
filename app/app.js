@@ -6,5 +6,11 @@ var ReactDOM = require("react-dom");
 var routes = require("./routes/routes");
 
 // This code here allows us to render our main component (in this case Main)
-ReactDOM.render(routes, document.getElementById("app"));
+//ReactDOM.render(routes, document.getElementById("app"));
+ReactDom.render(
+    <div className="main-container">
+        <div className="jumbotron"></div>
+    </div>
+
+);
 

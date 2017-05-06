@@ -1,3 +1,6 @@
+//testing this code as the html is not working. You may need to delete this later, Alex
+var webpack = require("webpack");
+
 module.exports = {
 
     // This is the entry point or start of our react applicaton
@@ -5,7 +8,9 @@ module.exports = {
 
     // The plain compiled JavaScript will be output into this file
     output: {
-        filename: "public/bundle.js"
+        filename: "/bundle.js",
+        path: __dirname + "/public", //removed public from bundle.js and added a path -Alex
+        watch: true,//added a watch to update webpack to up code as we change it
     },
 
     // This section desribes the transformations we will perform
@@ -17,7 +22,8 @@ module.exports = {
                 // Webpack will only process files in our app folder. This avoids processing
                 // node modules and server files unnecessarily
                 include: /app/,
-                loader: "babel",
+                loader: "babel-loader", //changed babel to "babel-loader as it is in our dependencies"-Alex
+                exclude: /node_modules/, //added exclude to code per video on Youtube - Alex
                 query: {
                     // These are the specific transformations we'll be using.
                     presets: ["react", "es2015"]

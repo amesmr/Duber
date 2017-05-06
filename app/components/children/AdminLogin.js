@@ -1,7 +1,7 @@
 // Include React
 var React = require("react");
 
-// This is the History component. It will be used to show a log of  recent
+// This is the History component. It will be used to show a log of recent
 // searches.
 var AdminLogin = React.createClass({
     // Here we describe this component's render method
