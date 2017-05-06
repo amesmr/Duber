@@ -18,13 +18,14 @@ var AdminMap = React.createClass({
 
 
     // Here we describe this component's render method
-    render: function () {
-
-        <div className="row">
-            <div id="map-view">
-            put map here
+    render () {
+        return (
+            <div className="row">
+                <div id="map-view">
+                    put map here
             </div>
-        </div>
+            </div>
+        );
 
     }
 });
