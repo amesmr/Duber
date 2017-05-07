@@ -7,10 +7,8 @@ var React = require("react");
 var About = React.createClass({
 
     // Child has a state
-    getInitialState: function() {
-        // return {
-        //     //
-        // };
+    getInitialState: function(data) {
+        return {data};
     },
 
     render: function() {
@@ -21,13 +19,12 @@ var About = React.createClass({
             </div>
             <div className = "panel-body text-center" >
             <p>
-            <h5>
+            
             We are the Transport
             for Rescue Animals Network.This is designed to be a national database where any animal in
             need of transport to their new, forever home.If you would like to volunteer your time to help on a leg of one of our animal 's journey, please sign up and we'
             ll be happy to get you set up to help a loving animal in need!
-            </h5>
-             {
+                         {
                 /*
                               Here we create a button with an onClick event listener.
                               Note how we have an onClick event associated with our handleClick function.

@@ -8,6 +8,7 @@ var AdminLogin = require("./AdminLogin");
 var AdminSignup = require("./AdminSignup");
 // var UserSignup = require("./UserSignup");
 // var UserView = require("./UserView");
+var About = require("./About");
 
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
