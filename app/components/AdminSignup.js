@@ -5,8 +5,8 @@ var React = require("react");
 var AdminSignup = React.createClass({
 
     // Here we set a generic state associated with the text being searched for
-    getInitialState: function () {
-        // return {term: ""};
+    getInitialState: function (data) {
+        return {data};
     },
 
     // This function will respond to the user input
