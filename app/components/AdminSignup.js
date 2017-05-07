@@ -5,13 +5,13 @@ var React = require("react");
 var AdminSignup = React.createClass({
 
     // Here we set a generic state associated with the text being searched for
-    getInitialState: function () {
-        return {term: ""};
+    getInitialState: function (data) {
+        return {data};
     },
 
     // This function will respond to the user input
     handleChange: function (event) {
-        this.setState({term: event.target.value});
+        // this.setState({term: event.target.value});
     },
 
     // When a user submits...
@@ -21,10 +21,10 @@ var AdminSignup = React.createClass({
         event.preventDefault();
 
         // Set the parent to have the search term
-        this
-            .props
-            .setTerm(this.state.term);
-        this.setState({term: ""});
+        // this
+        //     .props
+        //     .setTerm(this.state.term);
+        // this.setState({term: ""});
     },
     // Here we describe this component's render method
     render: function () {
@@ -34,109 +34,109 @@ var AdminSignup = React.createClass({
                     <h3 className="panel-title text-center">Signup Your Organization</h3>
                 </div>
                 <div className="panel-body text-center">
-                    <div class="bootstrap-iso">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div className="bootstrap-iso">
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-md-6 col-sm-6 col-xs-12">
                                     <form method="post">
-                                        <div class="form-group ">
-                                            <label class="control-label requiredField" for="name">
+                                        <div className="form-group ">
+                                            <label className="control-label requiredField" for="name">
                                                 User Name
-                                                <span class="asteriskField">
+                                                <span className="asteriskField">
                                                     *
                                                 </span>
                                             </label>
                                             <input
-                                                class="form-control"
+                                                className="form-control"
                                                 id="name"
                                                 name="name"
                                                 placeholder="UserName"
                                                 type="text"/>
                                         </div>
-                                        <div class="form-group ">
-                                            <label class="control-label requiredField" for="pswd">
+                                        <div className="form-group ">
+                                            <label className="control-label requiredField" for="pswd">
                                                 Password
                                                 <span class="asteriskField">
                                                     *
                                                 </span>
                                             </label>
                                             <input
-                                                class="form-control"
+                                                className="form-control"
                                                 id="pswd"
                                                 name="pswd"
                                                 placeholder="6 character minimum"
                                                 type="text"/>
                                         </div>
-                                        <div class="form-group ">
-                                            <label class="control-label requiredField" for="email">
+                                        <div className="form-group ">
+                                            <label className="control-label requiredField" for="email">
                                                 Email
-                                                <span class="asteriskField">
+                                                <span className="asteriskField">
                                                     *
                                                 </span>
                                             </label>
                                             <input
-                                                class="form-control"
+                                                className="form-control"
                                                 id="email"
                                                 name="email"
                                                 placeholder="user@email.com"
                                                 type="text"/>
                                         </div>
-                                        <div class="form-group ">
-                                            <label class="control-label requiredField" for="streetAddr">
+                                        <div className="form-group ">
+                                            <label className="control-label requiredField" for="streetAddr">
                                                 Street Address
-                                                <span class="asteriskField">
+                                                <span className="asteriskField">
                                                     *
                                                 </span>
                                             </label>
                                             <input
-                                                class="form-control"
+                                                className="form-control"
                                                 id="streetAddr"
                                                 name="streetAddr"
                                                 placeholder="111 Main St, SS, 12345"
                                                 type="text"/>
                                         </div>
-                                        <div class="form-group ">
-                                            <label class="control-label " for="mailAddr">
+                                        <div className="form-group ">
+                                            <label className="control-label " for="mailAddr">
                                                 Mailing Address (If different than Street Address)
                                             </label>
                                             <input
-                                                class="form-control"
+                                                className="form-control"
                                                 id="mailAddr"
                                                 name="mailAddr"
                                                 placeholder="111 Main St."
                                                 type="text"/>
                                         </div>
-                                        <div class="form-group ">
-                                            <label class="control-label requiredField" for="npID">
+                                        <div className="form-group ">
+                                            <label className="control-label requiredField" for="npID">
                                                 Non Profit ID (501c3)
-                                                <span class="asteriskField">
+                                                <span className="asteriskField">
                                                     *
                                                 </span>
                                             </label>
                                             <input
-                                                class="form-control"
+                                                className="form-control"
                                                 id="npID"
                                                 name="npID"
                                                 placeholder="341142324"
                                                 type="text"/>
                                         </div>
-                                        <div class="form-group ">
-                                            <label class="control-label requiredField" for="tel">
+                                        <div className="form-group ">
+                                            <label className="control-label requiredField" for="tel">
                                                 Telephone #
-                                                <span class="asteriskField">
+                                                <span className="asteriskField">
                                                     *
                                                 </span>
                                             </label>
                                             <input
-                                                class="form-control"
+                                                className="form-control"
                                                 id="tel"
                                                 name="tel"
                                                 placeholder="5551234567"
                                                 type="text"/>
                                         </div>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <div>
-                                                <button class="btn btn-primary " name="submit" type="submit">
+                                                <button className="btn btn-primary " name="submit" type="submit">
                                                     Submit
                                                 </button>
                                             </div>

@@ -1,12 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
-            // sequelize does this by default
-            // id: {
-            //     type: DataTypes.INTEGER,
-            //     primaryKey: true,
-            //     autoIncrement: true,
-            //     allowNull: false
-            // },
             email: {
                 type: DataTypes.STRING,
                 validate: {
