@@ -6,7 +6,7 @@ var React = require("react");
 var AdminMap = React.createClass({
 
     // Here we set a generic state associated with the text being searched for
-    getInitialState: function () {
+    getInitialState: function (data) {
 
         // TODO
         // we need to query db and return two arrays
@@ -14,6 +14,8 @@ var AdminMap = React.createClass({
         // then we need to populate a map object with 2 different
         // colored pins based on user/admin
         // return {TODO};
+
+        return {data};
     },
 
 
