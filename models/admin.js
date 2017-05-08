@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     var Admin = sequelize.define("Admin", {
-        name: {
+        admin_name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {

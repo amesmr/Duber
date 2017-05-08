@@ -40,7 +40,7 @@ var AdminSignup = React.createClass({
                                 <div className="col-md-6 col-sm-6 col-xs-12">
                                     <form method="post">
                                         <div className="form-group ">
-                                            <label className="control-label requiredField" for="name">
+                                            <label className="control-label requiredField" for="adminName">
                                                 User Name
                                                 <span className="asteriskField">
                                                     *
@@ -48,13 +48,13 @@ var AdminSignup = React.createClass({
                                             </label>
                                             <input
                                                 className="form-control"
-                                                id="name"
-                                                name="name"
+                                                id="adminName"
+                                                name="adminName"
                                                 placeholder="UserName"
                                                 type="text"/>
                                         </div>
                                         <div className="form-group ">
-                                            <label className="control-label requiredField" for="pswd">
+                                            <label className="control-label requiredField" for="pswd1">
                                                 Password
                                                 <span class="asteriskField">
                                                     *
@@ -62,8 +62,22 @@ var AdminSignup = React.createClass({
                                             </label>
                                             <input
                                                 className="form-control"
-                                                id="pswd"
-                                                name="pswd"
+                                                id="pswd1"
+                                                name="pswd1"
+                                                placeholder="6 character minimum"
+                                                type="text"/>
+                                        </div>
+                                        <div className="form-group ">
+                                            <label className="control-label requiredField" for="pswd2">
+                                                Password
+                                                <span class="asteriskField">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <input
+                                                className="form-control"
+                                                id="pswd2"
+                                                name="pswd2"
                                                 placeholder="6 character minimum"
                                                 type="text"/>
                                         </div>
