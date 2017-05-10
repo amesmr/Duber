@@ -1,12 +1,12 @@
 "use strict";
 // Include React
-var React = require("react");
+import React from "react"
 
 // This is the History component. It will be used to show a log of  recent
 // searches.
-var AdminLogin = React.createClass({
+export default class AdminLogin extends React.Component {
     // Here we describe this component's render method
-    render: function () {
+    render() {
         return (
             <div className="panel panel-default">
                 <div className="panel-heading">
@@ -18,7 +18,5 @@ var AdminLogin = React.createClass({
             </div>
         );
     }
-});
+}
 
-// Export the component back for use in other files
-module.exports = AdminLogin;

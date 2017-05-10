@@ -1,17 +1,18 @@
 "use strict";
 
 // Include React
-var React = require("react");
+import React from "react"
 
 // Create the Child Component
-var About = React.createClass({
 
-    // Child has a state
-    getInitialState: function(data) {
-        return {data};
-    },
+export default class About extends React.Component {
 
-    render: function() {
+    // // Child has a state
+    // getInitialState: function(data) {
+    //     return {data};
+    // },
+
+    render() {
         return (
             <div className = "panel panel-default" >
             <div className = "panel-heading" >
@@ -19,7 +20,7 @@ var About = React.createClass({
             </div>
             <div className = "panel-body text-center" >
             <p>
-            
+
             We are the Transport
             for Rescue Animals Network.This is designed to be a national database where any animal in
             need of transport to their new, forever home.If you would like to volunteer your time to help on a leg of one of our animal 's journey, please sign up and we'
@@ -40,7 +41,4 @@ var About = React.createClass({
             </div>
         );
     }
-});
-
-// Export the component back for use in other files
-module.exports = About;
+}

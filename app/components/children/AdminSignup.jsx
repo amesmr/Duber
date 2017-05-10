@@ -1,33 +1,38 @@
 // Include React
-var React = require("react");
+import React, { Component, PropTypes } from 'react';
 
 // Creating the Form component
-var AdminSignup = React.createClass({
+export default class AdminSignup extends React.Component {
 
-    // Here we set a generic state associated with the text being searched for
-    getInitialState: function (data) {
-        return {data};
-    },
+    // // Here we set a generic state associated with the text being searched for
+    // getInitialState: function (data) {
+    //     return {data};
+    // },
 
-    // This function will respond to the user input
-    handleChange: function (event) {
-        // this.setState({term: event.target.value});
-    },
+    // // This function will respond to the user input
+    // handleChange: function (event) {
 
-    // When a user submits...
-    handleSubmit: function (event) {
-        // prevent the HTML from trying to submit a form if the user hits "Enter"
-        // instead of clicking the button
-        event.preventDefault();
+    //     // This is where we need to fetch the user's google_location_id (or the lat/long) and save them to the DB
+    //     // PRIOR to the sumission of the users registration!
+    //     // there's a helper function that ought to do it, but I'm not sure how that'll play into the react stuff
+    //     // helper.locate(location) {
+    //     // do stuff here
+    //     // }
+    //     // this.setState({term: event.target.value});
+    // },
 
-        // Set the parent to have the search term
-        // this
-        //     .props
-        //     .setTerm(this.state.term);
-        // this.setState({term: ""});
-    },
+    // // When a user submits...
+    // handleSubmit: function (event) {
+    //     // prevent the HTML from trying to submit a form if the user hits "Enter" ????
+    //     // instead of clicking the button
+    //     event.preventDefault();
+
+    //     // helpers.locate(streetAddr) {
+
+    //     // }
+    // },
     // Here we describe this component's render method
-    render: function () {
+    render() {
         return (
             <div className="panel panel-default">
                 <div className="panel-heading">
@@ -164,7 +169,5 @@ var AdminSignup = React.createClass({
             </div>
         );
     }
-});
+}
 
-// Export the component back for use in other files
-module.exports = AdminSignup;
