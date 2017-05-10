@@ -24,14 +24,14 @@ export default class Main extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="jumbotron">
-                            <h2> className="text-center">TRAN (Transport Animal Rescue Network)</h2>
+                            <h2 className="text-center">TRAN (Transport Animal Rescue Network)</h2>
                         </div>
                     </div>
                 </div>
                 <div className="links">
                     <ul role="nav">
-                        <li><Link to="/adminSignup">About</Link></li>
-                        <li><Link to="/adminMap">AdminMap</Link></li>
+                        <li>link to adminSignup will go here</li>
+                        <li>link to adminMap will go here</li>
                     </ul>
 
                 </div>
