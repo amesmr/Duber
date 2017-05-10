@@ -1,17 +1,17 @@
 "use strict";
 // Include React
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 // Reference the high-level components
 // import AdminLogin from "./children/AdminLogin"
-import AdminSignup from "./children/AdminSignup.jsx"
-import AdminMap from "./children/AdminMap.jsx"
-// import Animals from "./children/Animals.jsx"
-import About from './children/About.jsx'
+import AdminSignup from "./children/AdminSignup";
+import AdminMap from "./children/AdminMap";
+// import Animals from "./children/Animals";
+import About from './children/About';
 
 // Helper for making AJAX requests to our API
-import helpers from "./utils/helpers.jsx"
+import helpers from "./utils/helpers";
 
   // TODO
   // figure out what needs to be set in this initial state
